@@ -1,0 +1,67 @@
+{
+  "name": "copy-selection-path",
+  "displayName": "Copy Selection Path",
+  "description": "Copy file path with line numbers from selection",
+  "version": "1.1.4",
+  "publisher": "whcater",
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#1e1e1e",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "copySelectionPath.copy",
+        "title": "Copy Selection with Path & Line Numbers"
+      },
+      {
+        "command": "copySelectionPath.copyFullPath",
+        "title": "Copy Selection with Full Path & Line Numbers"
+      },
+      {
+        "command": "copySelectionPath.copyPathWithContent",
+        "title": "Copy Path, Line Range & Content"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "copySelectionPath.copy",
+          "when": "editorHasSelection",
+          "group": "9_cutcopypaste@100"
+        },
+        {
+          "command": "copySelectionPath.copyFullPath",
+          "when": "editorHasSelection",
+          "group": "9_cutcopypaste@101"
+        },
+        {
+          "command": "copySelectionPath.copyPathWithContent",
+          "when": "editorHasSelection",
+          "group": "9_cutcopypaste@102"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^18.19.130",
+    "@types/vscode": "^1.74.0",
+    "@vscode/vsce": "^3.9.1",
+    "typescript": "^5.0.0"
+  }
+}
