@@ -2,8 +2,12 @@
   "name": "copy-selection-path",
   "displayName": "Copy Selection Path",
   "description": "Copy file path with line numbers from selection",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "publisher": "whcater",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/whcater/copy-selection-path.git"
+  },
   "icon": "icon.png",
   "galleryBanner": {
     "color": "#1e1e1e",

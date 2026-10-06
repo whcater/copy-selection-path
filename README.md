@@ -99,12 +99,12 @@ npx @vscode/vsce login whcater
 # Enter your PAT when prompted
 
 # 3. Package the extension
-npx @vscode/vsce package --allow-missing-repository
+npx @vscode/vsce package
 
 # 4. Publish to Marketplace
-npx @vscode/vsce publish --allow-missing-repository
+npx @vscode/vsce publish
 or
-npx @vscode/vsce publish minor --allow-missing-repository 2>&1
+npx @vscode/vsce publish minor 2>&1
 
 # Or publish with version bump
 npx @vscode/vsce publish patch  # 1.0.0 -> 1.0.1
